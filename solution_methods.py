@@ -111,7 +111,7 @@ def Jacobi(A: np.array, b, x):
 
     n = A.shape[0]
     iterations = 0
-    while not np.allclose(A.dot(x), b, atol=TOLERANCE, rtol=0) and iterations < 1000:
+    while not np.allclose(A.dot(x), b, atol=TOLERANCE, rtol=0) and iterations < 3000:
         print(x)
         x_next = x.copy()
         iterations += 1
@@ -133,7 +133,7 @@ def gauss_seidel(A: np.array, b, x):
 
     n = A.shape[0]
     iterations = 0
-    while not np.allclose(A.dot(x), b, atol=TOLERANCE, rtol=0)  and iterations < 1000:
+    while not np.allclose(A.dot(x), b, atol=TOLERANCE, rtol=0)  and iterations < 1500:
         print(x)
         iterations += 1
         for i in range(n):  
